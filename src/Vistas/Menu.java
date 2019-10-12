@@ -19,6 +19,7 @@ public class Menu extends javax.swing.JFrame {
     private int y;
 
     public Menu() {
+       
         initComponents();
         setLocationRelativeTo(null);
     }
@@ -33,13 +34,11 @@ public class Menu extends javax.swing.JFrame {
     private void initComponents() {
 
         jPanel1 = new javax.swing.JPanel();
-        lInventario1 = new javax.swing.JLabel();
-        lInventario2 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
+        btnInventario = new javax.swing.JButton();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setIconImages(null);
@@ -56,44 +55,12 @@ public class Menu extends javax.swing.JFrame {
             }
         });
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        jPanel1.setBackground(new java.awt.Color(252, 250, 246));
+        jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(62, 37, 69)));
         jPanel1.setForeground(new java.awt.Color(255, 255, 255));
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        lInventario1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lInventario1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cotizacion.png"))); // NOI18N
-        lInventario1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lInventario1.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lInventario1MouseClicked(evt);
-            }
-        });
-        jPanel1.add(lInventario1, new org.netbeans.lib.awtextra.AbsoluteConstraints(290, 150, 210, 190));
-
-        lInventario2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        lInventario2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inventario.png"))); // NOI18N
-        lInventario2.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
-        lInventario2.addMouseListener(new java.awt.event.MouseAdapter() {
-            public void mouseClicked(java.awt.event.MouseEvent evt) {
-                lInventario2MouseClicked(evt);
-            }
-        });
-        jPanel1.add(lInventario2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 150, 210, 190));
-
-        jLabel2.setBackground(new java.awt.Color(255, 99, 71));
-        jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 99, 71));
-        jLabel2.setText("Cotización");
-        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 340, -1, -1));
-
-        jLabel3.setBackground(new java.awt.Color(255, 99, 71));
-        jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(255, 99, 71));
-        jLabel3.setText("Inventario");
-        jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 340, -1, -1));
-
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(252, 250, 246));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icons8_Multiply_32px.png"))); // NOI18N
@@ -115,6 +82,48 @@ public class Menu extends javax.swing.JFrame {
         jPanel2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(820, 0, 40, 50));
 
         jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 910, 60));
+
+        btnInventario.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        btnInventario.setForeground(new java.awt.Color(62, 37, 69));
+        btnInventario.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inventario nuevo.png"))); // NOI18N
+        btnInventario.setText("Inventario");
+        btnInventario.setBorder(null);
+        btnInventario.setBorderPainted(false);
+        btnInventario.setContentAreaFilled(false);
+        btnInventario.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        btnInventario.setFocusPainted(false);
+        btnInventario.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnInventario.setIconTextGap(1);
+        btnInventario.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/inventario nuevo_126.png"))); // NOI18N
+        btnInventario.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/invenclaro.png"))); // NOI18N
+        btnInventario.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        btnInventario.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnInventarioActionPerformed(evt);
+            }
+        });
+        jPanel1.add(btnInventario, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 160, 160, 190));
+
+        jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jButton1.setForeground(new java.awt.Color(62, 37, 69));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cotizacion_1.png"))); // NOI18N
+        jButton1.setText("Cotización");
+        jButton1.setBorder(null);
+        jButton1.setBorderPainted(false);
+        jButton1.setContentAreaFilled(false);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.setFocusPainted(false);
+        jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton1.setIconTextGap(1);
+        jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cotizacion_126.png"))); // NOI18N
+        jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/cotizacionclaro.png"))); // NOI18N
+        jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(260, 160, 130, 190));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -145,16 +154,6 @@ public class Menu extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_jLabel1MouseClicked
 
-    private void lInventario2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lInventario2MouseClicked
-        new Resgistro_productos().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_lInventario2MouseClicked
-
-    private void lInventario1MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_lInventario1MouseClicked
-        new Cotizacion().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_lInventario1MouseClicked
-
     private void formMousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_formMousePressed
         x = evt.getX();
         y = evt.getY();
@@ -165,9 +164,16 @@ public class Menu extends javax.swing.JFrame {
         setLocation(point.x - x, point.y - y);
     }//GEN-LAST:event_formMouseDragged
 
-    /**
-     * @param args the command line arguments
-     */
+    private void btnInventarioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnInventarioActionPerformed
+        new Resgistro_productos().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_btnInventarioActionPerformed
+
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+       new Cotizacion().setVisible(true);
+       this.dispose();
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -201,13 +207,11 @@ public class Menu extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JButton btnInventario;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JLabel lInventario1;
-    private javax.swing.JLabel lInventario2;
     // End of variables declaration//GEN-END:variables
 }

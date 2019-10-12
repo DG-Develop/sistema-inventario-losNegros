@@ -20,19 +20,15 @@ import javax.swing.plaf.ComboBoxUI;
 import javax.swing.plaf.basic.BasicArrowButton;
 import javax.swing.plaf.basic.BasicComboBoxUI;
 
-/**
- *
- * @author USER-PC
- */
 public class CustomUI extends BasicComboBoxUI {
 
     private ImageIcon espacio = new ImageIcon(getClass().getResource("/imagenes/banner.png"));
     private Color naranja = new Color(255, 99, 68);
-
+    
     public static ComboBoxUI createUI(JComponent c) {
         return new CustomUI();
     }
-
+    
     @Override
     protected JButton createArrowButton() {
         BasicArrowButton basicArrowButton = new BasicArrowButton(BasicArrowButton.SOUTH, //Direccion de la flecha

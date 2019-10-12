@@ -57,6 +57,7 @@ public class Cotizacion extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
@@ -87,7 +88,7 @@ public class Cotizacion extends javax.swing.JFrame {
                 comboCategoriaActionPerformed(evt);
             }
         });
-        jPanel2.add(comboCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 40, 270, -1));
+        jPanel2.add(comboCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 60, 270, -1));
 
         ComboProductos.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ComboProductos.setModel(new javax.swing.DefaultComboBoxModel<>());
@@ -96,30 +97,39 @@ public class Cotizacion extends javax.swing.JFrame {
                 ComboProductosActionPerformed(evt);
             }
         });
-        jPanel2.add(ComboProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 40, 270, -1));
+        jPanel2.add(ComboProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 270, -1));
 
+        jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(255, 99, 71));
         jLabel1.setText("Descripción");
-        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 10, -1, -1));
+        jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 820, 100));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 820, 120));
 
         ComboCantidad.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ComboCantidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4","5", "6", "7", "8"
             ,"9", "10", "11", "12","13", "14", "15", "16","17", "18", "19", "20"}));
-jPanel1.add(ComboCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, 270, -1));
+jPanel1.add(ComboCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 270, -1));
 
+jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+jLabel2.setForeground(new java.awt.Color(255, 99, 71));
 jLabel2.setText("Cantidad: ");
-jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 220, -1, -1));
+jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
 
+jTextField1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+jTextField1.setForeground(new java.awt.Color(155, 155, 155));
+jTextField1.setBorder(null);
 jTextField1.addActionListener(new java.awt.event.ActionListener() {
     public void actionPerformed(java.awt.event.ActionEvent evt) {
         jTextField1ActionPerformed(evt);
     }
     });
-    jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 250, 300, -1));
+    jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 270, 230, 40));
 
+    jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+    jLabel3.setForeground(new java.awt.Color(255, 99, 71));
     jLabel3.setText("Otra cantidad:");
-    jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 220, -1, -1));
+    jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, -1, -1));
 
     jButton1.setText("Imprimir Cotización");
     jButton1.addActionListener(new java.awt.event.ActionListener() {
@@ -127,7 +137,7 @@ jTextField1.addActionListener(new java.awt.event.ActionListener() {
             jButton1ActionPerformed(evt);
         }
     });
-    jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(590, 560, -1, -1));
+    jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 530, -1, -1));
 
     btnAgregar.setText("Agregar");
     btnAgregar.addActionListener(new java.awt.event.ActionListener() {
@@ -135,7 +145,7 @@ jTextField1.addActionListener(new java.awt.event.ActionListener() {
             btnAgregarActionPerformed(evt);
         }
     });
-    jPanel1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 560, -1, -1));
+    jPanel1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 530, -1, -1));
 
     TablaCotizacion.setModel(new javax.swing.table.DefaultTableModel(
         new Object [][] {
@@ -165,7 +175,7 @@ jTextField1.addActionListener(new java.awt.event.ActionListener() {
         TablaCotizacion.getColumnModel().getColumn(3).setResizable(false);
     }
 
-    jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 310, -1, 120));
+    jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, -1, 120));
 
     jPanel3.setBackground(new java.awt.Color(255, 255, 255));
     jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -187,6 +197,7 @@ jTextField1.addActionListener(new java.awt.event.ActionListener() {
     jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, 40, 40));
 
     jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 910, 90));
+    jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 310, 230, 10));
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
@@ -325,6 +336,7 @@ jTextField1.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel3;
     private javax.swing.JScrollPane jScrollPane3;
+    private javax.swing.JSeparator jSeparator1;
     private javax.swing.JTextField jTextField1;
     // End of variables declaration//GEN-END:variables
 }
