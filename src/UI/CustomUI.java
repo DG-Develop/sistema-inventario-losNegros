@@ -23,7 +23,7 @@ import javax.swing.plaf.basic.BasicComboBoxUI;
 public class CustomUI extends BasicComboBoxUI {
 
     private ImageIcon espacio = new ImageIcon(getClass().getResource("/imagenes/banner.png"));
-    private Color naranja = new Color(255, 99, 68);
+    private Color morado = new Color(62, 37, 69);
     
     public static ComboBoxUI createUI(JComponent c) {
         return new CustomUI();
@@ -38,14 +38,14 @@ public class CustomUI extends BasicComboBoxUI {
                 Color.WHITE //highlight
         );
         //se quita el efecto 3d del boton, sombra y darkShadow no se aplican 
-        basicArrowButton.setBorder(BorderFactory.createLineBorder(naranja, 2));
+        basicArrowButton.setBorder(BorderFactory.createLineBorder(morado, 2));
         basicArrowButton.setContentAreaFilled(false);
         return basicArrowButton;
     }
 
     @Override
     public void paintCurrentValueBackground(Graphics g, Rectangle bounds, boolean hasFocus) {
-        g.setColor(naranja);
+        g.setColor(morado);
         g.fillRect(bounds.x, bounds.y, bounds.width, bounds.height);
     }
 
@@ -59,9 +59,9 @@ public class CustomUI extends BasicComboBoxUI {
                     boolean isSelected, boolean cellHasFocus) {
 
                 super.getListCellRendererComponent(list, value, index, isSelected, cellHasFocus);
-                list.setSelectionBackground(naranja);
+                list.setSelectionBackground(morado);
                 if (isSelected) {
-                    setBackground(naranja);
+                    setBackground(morado);
                     setForeground(Color.WHITE);
                 } else {
                     setBackground(Color.WHITE);

@@ -57,13 +57,14 @@ public class Cotizacion extends javax.swing.JFrame {
         jPanel3 = new javax.swing.JPanel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
+        jButton2 = new javax.swing.JButton();
         jSeparator1 = new javax.swing.JSeparator();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
         setResizable(false);
 
-        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setBackground(new java.awt.Color(252, 250, 246));
         jPanel1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel1.addMouseMotionListener(new java.awt.event.MouseMotionAdapter() {
             public void mouseDragged(java.awt.event.MouseEvent evt) {
@@ -77,7 +78,7 @@ public class Cotizacion extends javax.swing.JFrame {
         });
         jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setBackground(new java.awt.Color(252, 250, 246));
         jPanel2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
         jPanel2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
@@ -100,22 +101,23 @@ public class Cotizacion extends javax.swing.JFrame {
         jPanel2.add(ComboProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 60, 270, -1));
 
         jLabel1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(255, 99, 71));
+        jLabel1.setForeground(new java.awt.Color(62, 37, 69));
         jLabel1.setText("Descripción");
         jPanel2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 10, -1, -1));
 
-        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 130, 820, 120));
+        jPanel1.add(jPanel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 110, 820, 120));
 
         ComboCantidad.setFont(new java.awt.Font("Tahoma", 1, 18)); // NOI18N
         ComboCantidad.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "1", "2", "3", "4","5", "6", "7", "8"
             ,"9", "10", "11", "12","13", "14", "15", "16","17", "18", "19", "20"}));
-jPanel1.add(ComboCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(140, 280, 270, -1));
+jPanel1.add(ComboCantidad, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 250, 270, -1));
 
 jLabel2.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-jLabel2.setForeground(new java.awt.Color(255, 99, 71));
+jLabel2.setForeground(new java.awt.Color(62, 37, 69));
 jLabel2.setText("Cantidad: ");
-jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 280, -1, -1));
+jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 250, -1, -1));
 
+jTextField1.setBackground(new java.awt.Color(252, 250, 246));
 jTextField1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
 jTextField1.setForeground(new java.awt.Color(155, 155, 155));
 jTextField1.setBorder(null);
@@ -124,28 +126,55 @@ jTextField1.addActionListener(new java.awt.event.ActionListener() {
         jTextField1ActionPerformed(evt);
     }
     });
-    jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 270, 230, 40));
+    jPanel1.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 240, 230, 40));
 
     jLabel3.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
-    jLabel3.setForeground(new java.awt.Color(255, 99, 71));
+    jLabel3.setForeground(new java.awt.Color(62, 37, 69));
     jLabel3.setText("Otra cantidad:");
-    jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 280, -1, -1));
+    jPanel1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(440, 250, -1, -1));
 
+    jButton1.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+    jButton1.setForeground(new java.awt.Color(62, 37, 69));
+    jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imprimir.png"))); // NOI18N
     jButton1.setText("Imprimir Cotización");
+    jButton1.setBorder(null);
+    jButton1.setBorderPainted(false);
+    jButton1.setContentAreaFilled(false);
+    jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+    jButton1.setFocusPainted(false);
+    jButton1.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    jButton1.setIconTextGap(1);
+    jButton1.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imprimir_126.png"))); // NOI18N
+    jButton1.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/imprimirclaro.png"))); // NOI18N
+    jButton1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+    jButton1.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
     jButton1.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             jButton1ActionPerformed(evt);
         }
     });
-    jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 530, -1, -1));
+    jPanel1.add(jButton1, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 350, 200, 180));
 
+    btnAgregar.setFont(new java.awt.Font("Dialog", 1, 18)); // NOI18N
+    btnAgregar.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/add.png"))); // NOI18N
     btnAgregar.setText("Agregar");
+    btnAgregar.setBorder(null);
+    btnAgregar.setBorderPainted(false);
+    btnAgregar.setContentAreaFilled(false);
+    btnAgregar.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+    btnAgregar.setFocusPainted(false);
+    btnAgregar.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    btnAgregar.setIconTextGap(1);
+    btnAgregar.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/add_126.png"))); // NOI18N
+    btnAgregar.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/addclaro.png"))); // NOI18N
+    btnAgregar.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+    btnAgregar.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
     btnAgregar.addActionListener(new java.awt.event.ActionListener() {
         public void actionPerformed(java.awt.event.ActionEvent evt) {
             btnAgregarActionPerformed(evt);
         }
     });
-    jPanel1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 530, -1, -1));
+    jPanel1.add(btnAgregar, new org.netbeans.lib.awtextra.AbsoluteConstraints(550, 380, 110, 150));
 
     TablaCotizacion.setModel(new javax.swing.table.DefaultTableModel(
         new Object [][] {
@@ -175,9 +204,9 @@ jTextField1.addActionListener(new java.awt.event.ActionListener() {
         TablaCotizacion.getColumnModel().getColumn(3).setResizable(false);
     }
 
-    jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(220, 340, -1, 120));
+    jPanel1.add(jScrollPane3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 310, -1, 260));
 
-    jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+    jPanel3.setBackground(new java.awt.Color(252, 250, 246));
     jPanel3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
     jLabel4.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/icons8_Expand_Arrow_32px.png"))); // NOI18N
@@ -196,8 +225,26 @@ jTextField1.addActionListener(new java.awt.event.ActionListener() {
     });
     jPanel3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 0, 40, 40));
 
+    jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/regresar.png"))); // NOI18N
+    jButton2.setBorder(null);
+    jButton2.setBorderPainted(false);
+    jButton2.setContentAreaFilled(false);
+    jButton2.setFocusPainted(false);
+    jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+    jButton2.setIconTextGap(1);
+    jButton2.setPressedIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/regresar_40.png"))); // NOI18N
+    jButton2.setRolloverIcon(new javax.swing.ImageIcon(getClass().getResource("/imagenes/regresarclaro.png"))); // NOI18N
+    jButton2.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+    jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+    jButton2.addActionListener(new java.awt.event.ActionListener() {
+        public void actionPerformed(java.awt.event.ActionEvent evt) {
+            jButton2ActionPerformed(evt);
+        }
+    });
+    jPanel3.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 70, 70));
+
     jPanel1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 10, 910, 90));
-    jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(555, 310, 230, 10));
+    jPanel1.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 280, 230, 10));
 
     javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
     getContentPane().setLayout(layout);
@@ -283,6 +330,11 @@ jTextField1.addActionListener(new java.awt.event.ActionListener() {
             System.exit(0);
         }
     }//GEN-LAST:event_jLabel5MouseClicked
+
+    private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
+        new Menu().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_jButton2ActionPerformed
     
     public JComboBox estiloCombo(){
         SComboBox combo = new SComboBox();
@@ -327,6 +379,7 @@ jTextField1.addActionListener(new java.awt.event.ActionListener() {
     private javax.swing.JButton btnAgregar;
     public javax.swing.JComboBox<String> comboCategoria;
     private javax.swing.JButton jButton1;
+    private javax.swing.JButton jButton2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
